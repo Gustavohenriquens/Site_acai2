@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/testee.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+
+    <title>Document</title>
+
+    <script src="JS/testee.js"></script>
+</head>
+
+<body>
+
+    
+    
+    <header class="header">
+        <a href="teste.html" class="logo">Logo.</a>
+
+        <a href="inicio.html"> <i id="menu-iconn" class='bx bx-log-out-circle'></a></i>
+    </header>  
+ 
+
+
+
+    <section class="page_toda" id="page_toda">
+        <h2 class="titulo">Faça seu Pedido<span></span></h2>
+
+
+
+
+    <div class="container">
+
+
+        <div class="card">
+            <img src="images/acai.png" alt="Sanduba de Frango">
+            <h2>Açaí Artesanal</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur ex hic tempora. A voluptatibus aspernatur facere soluta, earum quo voluptates est! Quod praesentium atque natus, ea provident inventore dolore.</p>
+            <p class="p_preco_card">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('myModal1')">Monte seu Açaí</a>
+            <div class="descricao-produto"></div>
+        </div>
+        <!-- Modal 1 -->
+        <div id="myModal1" class="modal">
+            <div style="display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto;" class="modal-content">
+
+                <div  class="close" onclick="closeModal('myModal1')">
+                <span onclick="closeModal('myModal1')">X</span>
+                </div>
+                <!-- Conteúdo do modal -->
+                <img src="images/acai.png" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p class="p_preco"> <b>A partir de R$ 22,00</b></p>
+
+
+                <div id="obrigatorio">
+
+                <div class="obrigatorio_embalagem">
+                    <h3>Embalagem</h3>
+                    <p class="obrigatorio_p_i"><i><i class='bx bx-error-circle'></i></i><span></span>Obrigatorio</p>
+                </div>
+
+                <div>
+                    <p>Escolha 1 Opção</p>
+                </div>
+
+
+
+                <div style="background-color: rgb(228, 221, 221);" class="contador_container2">
+                    <p class="valor" style="font-size: 12px;"> + R$ 1,00</p>
+                  <div class="counter-container">
+                    <div class="counter" id="counter2">0</div>
+                    <button class="btn-increment" onclick="updateCounter('counter2', 1)">+</button>
+                    <button class="btn-decrement" onclick="updateCounter('counter2', -1)">-</button>
+                  </div>
+                </div>
+               </div>
+
+
+
+
+                
+        
+                <div style="background: rgb(234, 226, 226); margin-bottom: 25px;">
+                    <p> <b>Escolha Duas Opções de Topping:</b></p>
+                    <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal1" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi    
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+
+
+                    <div id="contadores">
+
+
+                        <div class="contador_container2">
+                            <p>Salada  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter1">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter1', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter1', -1)">-</button>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="contador_container2">
+                            <p>Leite em Pó  <span style="color: rgb(231, 86, 86);display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter3">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter3', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter3', -1)">-</button>
+                            </div>
+                        </div>
+
+                        <div class="contador_container2">
+                            <p>Mel  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter4">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter4', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter4', -1)">-</button>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="contador_container2">
+                            <p>Granola  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter5">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter5', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter5', -1)">-</button>
+                            </div>
+                        </div>
+
+                        <div class="contador_container2">
+                            <p>Chocolate  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter6">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter6', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter6', -1)">-</button>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+
+
+                     <form id="form" onsubmit="return confirmPurchase('myModal1');"   >
+                        <h2>Seu Endereço</h2>
+                        <label for="">Bairro</label> <br>
+                        <input id="bairro" type="text" placeholder="Seu bairro..." required><br>
+
+                        <label for="">Rua</label> <br>
+                        <input id="rua" type="text" placeholder="Sua rua..." required><br>
+
+                        <label for="">Número da casa</label> <br>
+                        <input id="numeroCasa" type="number" placeholder="Número da sua casa..." required>
+
+                        <br><br>
+                         <input  id="enviarPedido" class="btn1" type="submit" value="Enviar"> 
+                    </form>
+                    <br><br> 
+                  
+
+            </div>
+        </div>
+
+
+
+
+
+        
+        
+        <div class="card">
+            <img src="images/acai_2.jpg" alt="Sanduba de Frango">
+            <h2>Açaí Artesanal</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur ex hic tempora. A voluptatibus aspernatur facere soluta, earum quo voluptates est! Quod praesentium atque natus, ea provident inventore dolore.</p>
+            <p class="p_preco_card">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('myModal2')">Monte seu Açaí</a>
+            <div class="descricao-produto"></div>
+        </div>
+        <!-- Modal 2 -->
+ <div id="myModal2" class="modal2">
+    <div style="display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto;" class="modal-content modal-content2">
+
+        <div class="close" onclick="closeModal('myModal2')">
+            <span onclick="closeModal('myModal2')">X</span>
+            </div>
+            <!-- Conteúdo do modal -->
+            <img src="images/acai_2.jpg" alt="">
+            <h2>Açaí Artesanal 300ml (Curto)</h2>
+            <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+            <p class="p_preco"> <b>A partir de R$ 22,00</b></p>
+
+
+            <div id="obrigatorio">
+
+            <div class="obrigatorio_embalagem">
+                <h3>Embalagem</h3>
+                <p class="obrigatorio_p_i"><i><i class='bx bx-error-circle'></i></i><span></span>Obrigatorio</p>
+            </div>
+
+            <div>
+                <p>Escolha 1 Opção</p>
+            </div>
+
+
+            <div style="background-color: rgb(228, 221, 221);" class="contador_container2">
+                <p class="valor" style="font-size: 12px;"> + R$ 1,00</p>
+                <div class="counter-container">
+                  <div class="counter" id="counter2">0</div>
+                  <button class="btn-increment2" onclick="updateCounter('counter2', 1)">+</button>
+                  <button class="btn-decrement2" onclick="updateCounter('counter2', -1)">-</button>
+                </div>
+              </div>
+
+
+            
+           </div>
+
+   
+            <div style="background: rgb(234, 226, 226); margin-bottom: 25px;">
+                <p> <b>Escolha Duas Opções de Topping:</b></p>
+                <p> <b>Escolha 2 opções:</b></p>
+            </div>
+
+
+                <form id="check_modal2" action="#">
+                    <label>
+                        <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi    
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                    </label><br>
+                
+                    <label>
+                        <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                    </label><br>
+                
+                </form>
+
+
+
+                <div id="contadores">
+
+
+                    <div class="contador_container2">
+                        <p>Salada  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                        <div class="counter-container">
+                            <div class="counter" id="counter1">0</div>
+                            <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter1', 1)">+</button>
+                            <button class="btn-decrement" onclick="updateCounter('counter1', -1)">-</button>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="contador_container2">
+                        <p>Leite em Pó  <span style="color: rgb(231, 86, 86);display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                        <div class="counter-container">
+                            <div class="counter" id="counter3">0</div>
+                            <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter3', 1)">+</button>
+                            <button class="btn-decrement" onclick="updateCounter('counter3', -1)">-</button>
+                        </div>
+                    </div>
+
+                    <div class="contador_container2">
+                        <p>Mel  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                        <div class="counter-container">
+                            <div class="counter" id="counter4">0</div>
+                            <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter4', 1)">+</button>
+                            <button class="btn-decrement" onclick="updateCounter('counter4', -1)">-</button>
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="contador_container2">
+                        <p>Granola  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                        <div class="counter-container">
+                            <div class="counter" id="counter5">0</div>
+                            <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter5', 1)">+</button>
+                            <button class="btn-decrement" onclick="updateCounter('counter5', -1)">-</button>
+                        </div>
+                    </div>
+
+                    <div class="contador_container2">
+                        <p>Chocolate  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                        <div class="counter-container">
+                            <div class="counter" id="counter6">0</div>
+                            <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter6', 1)">+</button>
+                            <button class="btn-decrement" onclick="updateCounter('counter6', -1)">-</button>
+                        </div>
+                    </div>
+                    
+
+
+                </div>
+
+
+                 <form id="form" onsubmit="return confirmPurchase('myModal2');">
+                    <h2>Seu Endereço</h2>
+                    <label for="">Bairro</label> <br>
+                    <input id="bairro" type="text" placeholder="Seu bairro..." required><br>
+
+                    <label for="">Rua</label> <br>
+                    <input id="rua" type="text" placeholder="Sua rua..." required><br>
+
+                    <label for="">Número da casa</label> <br>
+                    <input id="numeroCasa" type="number" placeholder="Número da sua casa..." required>
+
+                    <br><br>
+                     <input  id="enviarPedido" class="btn1" type="submit" value="Enviar"> 
+                </form>
+                <br><br> 
+
+
+    </div>
+</div>
+    
+
+
+
+
+
+
+<div class="card">
+    <img src="images/acai.png" alt="Sanduba de Frango">
+    <h2>Açaí Artesanal</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur ex hic tempora. A voluptatibus aspernatur facere soluta, earum quo voluptates est! Quod praesentium atque natus, ea provident inventore dolore.</p>
+    <p class="p_preco_card">R$ 24,00</p>
+    <a class="comprar-button1" onclick="openModal('myModal3')">Monte seu Açaí</a>
+    <div class="descricao-produto"></div>
+</div>
+        <!-- Modal 3 -->
+        <div id="myModal3" class="modal">
+            <div style="display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto;" class="modal-content">
+        
+                <span class="close" onclick="closeModal('myModal3')"><i class='bx bxs-message-square-x'></i></span>
+                <!-- Conteúdo do modal -->
+                <img src="images/acai_2.jpg" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p class="p_preco"> <b>A partir de R$ 22,00</b></p>
+    
+    
+                <div id="obrigatorio">
+    
+                <div class="obrigatorio_embalagem">
+                    <h3>Embalagem</h3>
+                    <p class="obrigatorio_p_i"><i><i class='bx bx-error-circle'></i></i><span></span>Obrigatorio</p>
+                </div>
+    
+                <div>
+                    <p>Escolha 1 Opção</p>
+                </div>
+    
+    
+                <div style="background-color: rgb(228, 221, 221);" class="contador_container2">
+                    <p class="valor" style="font-size: 12px;"> + R$ 1,00</p>
+                  <div class="counter-container">
+                    <div class="counter" id="counter2">0</div>
+                    <button class="btn-increment" onclick="updateCounter('counter2', 1)">+</button>
+                    <button class="btn-decrement" onclick="updateCounter('counter2', -1)">-</button>
+                  </div>
+                </div>
+               </div>
+    
+    
+                
+        
+                <div style="background: rgb(234, 226, 226); margin-bottom: 25px;">
+                    <p> <b>Escolha Duas Opções de Topping:</b></p>
+                    <p> <b>Escolha 2 opções:</b></p>
+                </div>
+    
+    
+                    <form id="check_modal3" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi    
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+    
+    
+    
+                    <div id="contadores">
+    
+    
+                        <div class="contador_container2">
+                            <p>Salada  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter1">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter1', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter1', -1)">-</button>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="contador_container2">
+                            <p>Leite em Pó  <span style="color: rgb(231, 86, 86);display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter3">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter3', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter3', -1)">-</button>
+                            </div>
+                        </div>
+    
+                        <div class="contador_container2">
+                            <p>Mel  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter4">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter4', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter4', -1)">-</button>
+                            </div>
+                            
+                        </div>
+    
+    
+                        <div class="contador_container2">
+                            <p>Granola  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter5">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter5', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter5', -1)">-</button>
+                            </div>
+                        </div>
+    
+                        <div class="contador_container2">
+                            <p>Chocolate  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counter6">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="updateCounter('counter6', 1)">+</button>
+                                <button class="btn-decrement" onclick="updateCounter('counter6', -1)">-</button>
+                            </div>
+                        </div>
+                        
+    
+    
+                    </div>
+    
+    
+                     <form id="form" onsubmit="return confirmPurchase('myModal3');"   >
+                        <h2>Seu Endereço</h2>
+                        <label for="">Bairro</label> <br>
+                        <input id="bairro" type="text" placeholder="Seu bairro..." required><br>
+    
+                        <label for="">Rua</label> <br>
+                        <input id="rua" type="text" placeholder="Sua rua..." required><br>
+    
+                        <label for="">Número da casa</label> <br>
+                        <input id="numeroCasa" type="number" placeholder="Número da sua casa..." required>
+    
+                        <br><br>
+                         <input  id="enviarPedido" class="btn1" type="submit" value="Enviar"> 
+                    </form>
+                    <br><br> 
+        
+        
+            </div>
+        </div>
+
+
+
+    
+        <div class="card">
+            <img src="images/acai_2.jpg" alt="Sanduba de Frango">
+            <h2>Açaí Artesanal</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates consequuntur ex hic tempora. A voluptatibus aspernatur facere soluta, earum quo voluptates est! Quod praesentium atque natus, ea provident inventore dolore.</p>
+            <p class="p_preco_card">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('myModal4')">Monte seu Açaí</a>
+            <div class="descricao-produto"></div>
+        </div>
+            <!-- Modal 4 -->
+            <div id="myModal4" class="modal">
+                <div style="display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto;" class="modal-content">
+            
+                    <span class="close" onclick="closeModal('myModal4')"><i class='bx bxs-message-square-x'></i></span>
+                    <!-- Conteúdo do modal -->
+                    <img src="images/acai_2.jpg" alt="">
+                    <h2>Açaí Artesanal 300ml (Curto)</h2>
+                    <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                    <p> <b>A partir de R$ 22,00</b></p>
+            
+                    <div style="background: rgb(234, 226, 226); margin-bottom: 15px;">
+                        <p> <b>Escolha Duas Opções de Topping:</b></p>
+                        <p> <b>Escolha 2 opções:</b></p>
+                    </div>
+
+
+
+
+                    <div style="background-color: rgb(228, 221, 221);" class="contador_container2">
+                        <p class="valor" style="font-size: 12px;"> + R$ 1,00</p>
+                      <div class="counter-container">
+                        <div class="counter" id="counter2">0</div>
+                        <button class="btn-increment" onclick="updateCounter('counter2', 1)">+</button>
+                        <button class="btn-decrement" onclick="updateCounter('counter2', -1)">-</button>
+                      </div>
+                    </div>
+            
+
+                    
+                        <form id="check_modal1" action="#">
+                            <label>
+                                <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                            </label><br>
+                        
+                            <label>
+                                <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                            </label><br>
+                        
+                        </form>
+            
+                       <!-- <div>
+                            <h3 style="font-size: 18px; color: black; margin-bottom: 8px;">Algum comentário adicional?</h3>
+                            <textarea name="" id="" cols="60" rows="5" placeholder="Ex: Sem picles, alérgico a nozes, maionese a parte, etc."></textarea>
+                        </div>  -->
+                
+                        <button onclick="confirmPurchase('myModal4')">Confirmar</button>
+            
+            
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="menu1">
+
+        
+        <div class="card1">
+            <img onclick="openModal('myModall1')" src="images/acai_2.jpg" alt="Sanduba de Frango">
+            <h2  onclick="openModal('myModall1')">Açaí Artesanal</h2>
+            <p>Banana, granola, leite em pó, farinha de amendoim, leite Condensado, sucrilho.</p>
+            <p class="p_preco_card2">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('myModall1')">+</a>
+            <div class="descricao-produto"></div>
+        </div>
+
+
+        <div id="myModall1" class="modal">
+            <div style="display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto;" class="modal-content">
+
+                <div  class="close" onclick="closeModal('myModall1')">
+                <span onclick="closeModal('myModall1')">X</span>  
+                </div>
+                <!-- Conteúdo do modal -->
+                <img src="images/acai_2.jpg" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p class="p_preco"> <b>A partir de R$ 22,00</b></p>
+
+
+                <div id="obrigatorio">
+
+                <div class="obrigatorio_embalagem">
+                    <h3>Embalagem</h3>
+                    <p class="obrigatorio_p_i"><i><i class='bx bx-error-circle'></i></i><span></span>Obrigatorio</p>
+                </div>
+
+                <div>
+                    <p>Escolha 1 Opção</p>
+                </div>
+
+                  
+                  <!-- Seu código HTML -->
+                  <div style="background-color: rgb(228, 221, 221);" class="contador_container2">
+                    <p class="valor2" style="font-size: 12px;"> + R$ 1,00</p>
+                    <div class="counter-container2">
+                      <div class="counter" id="counterMenu1">0</div>
+                      <button class="btn-increment2" onclick="incrementCounter('counterMenu1')">+</button>
+                      <button class="btn-decrement2" onclick="decrementCounter('counterMenu1')">-</button>
+                    </div>
+                  </div>
+
+                  
+                  <!-- Seu script JavaScript -->
+                  <script>
+                    function incrementCounter(counterId) {
+                      // Incrementa todos os contadores, exceto counterMenu1
+                      if (counters[counterId] < 999 && counterId !== 'counterMenu1') {
+                        counters[counterId]++;
+                      } else if (counterId === 'counterMenu1' && counters[counterId] < 1) {
+                        counters[counterId] = 1;
+                      }
+                  
+                      document.getElementById(counterId).textContent = counters[counterId];
+                    }
+                  
+                    function decrementCounter(counterId) {
+                      // Decrementa todos os contadores, exceto counterMenu1
+                      if (counters[counterId] > 0 && counterId !== 'counterMenu1') {
+                        counters[counterId]--;
+                      } else if (counterId === 'counterMenu1' && counters[counterId] > 0) {
+                        counters[counterId] = 0;
+                      }
+                  
+                      document.getElementById(counterId).textContent = counters[counterId];
+                    }
+                  </script>
+
+               </div>
+          
+        
+                <div style="background: rgb(234, 226, 226); margin-bottom: 25px;">
+                    <p> <b>Escolha Duas Opções de Topping:</b></p>
+                    <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal1" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi    
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+
+
+                    <div id="contadores">
+
+
+                        <div class="contador_container2">
+                            <p>Salada  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu1A1">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu1A1', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu1A1', -1)">-</button>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="contador_container2">
+                            <p>Leite em Pó  <span style="color: rgb(231, 86, 86);display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu1A2">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu1A2', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu1A2', -1)">-</button>
+                            </div>
+                        </div>
+
+                        <div class="contador_container2">
+                            <p>Mel  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu1A3">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu1A3', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu1A3', -1)">-</button>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="contador_container2">
+                            <p>Granola  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu1A4">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu1A4', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu1A4', -1)">-</button>
+                            </div>
+                        </div>
+
+                        <div class="contador_container2">
+                            <p>Chocolate  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu1A5">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu1A5', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu1A5', -1)">-</button>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+
+
+                     <form id="form" onsubmit="return confirmPurchase('myModal');"   >
+                        <h2>Seu Endereço</h2>
+                        <label for="">Bairro</label> <br>
+                        <input id="bairro" type="text" placeholder="Seu bairro..." required><br>
+
+                        <label for="">Rua</label> <br>
+                        <input id="rua" type="text" placeholder="Sua rua..." required><br>
+
+                        <label for="">Número da casa</label> <br>
+                        <input id="numeroCasa" type="number" placeholder="Número da sua casa..." required>
+
+                        <br><br>
+                         <input  id="enviarPedido" class="btn1" type="submit" value="Enviar"> 
+                    </form>
+                    <br><br> 
+                  
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+         <div class="card2">
+            <img onclick="openModal('myModall2')" src="images/acai_3.jpg" alt="Sanduba de Frango">
+            <h2  onclick="openModal('myModall2')">Açaí Artesanal</h2>
+            <p>Banana, granola, leite em pó, farinha de amendoim, leite Condensado, sucrilho.</p>
+            <p class="p_preco_card2">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('myModall2')">+</a>
+            <div class="descricao-produto"></div>
+        </div>
+
+        <div id="myModall2" class="modal">
+            <div style="display: flex; flex-direction: column; max-height: 80vh; overflow-y: auto;" class="modal-content">
+
+                <div  class="close" onclick="closeModal('myModall2')">
+                <span onclick="closeModal('myModall2')">X</span>
+                </div>
+                <!-- Conteúdo do modal -->
+                <img src="images/acai_3.jpg" alt="">
+                <h2>Açaí Artesanal 300ml (Curto)</h2>
+                <p>Delicioso Açaí especial batido artesanalmente com uma receita exclusiva sem adição de Xarope.</p>
+                <p class="p_preco"> <b>A partir de R$ 22,00</b></p>
+
+
+                <div id="obrigatorio">
+
+                <div class="obrigatorio_embalagem">
+                    <h3>Embalagem</h3>
+                    <p class="obrigatorio_p_i"><i><i class='bx bx-error-circle'></i></i><span></span>Obrigatorio</p>
+                </div>
+
+                <div>
+                    <p>Escolha 1 Opção</p>
+                </div>
+
+
+                  
+                  <!-- Seu código HTML -->
+                  <div style="background-color: rgb(228, 221, 221);" class="contador_container2">
+                    <p class="valor2" style="font-size: 12px;"> + R$ 1,00</p>
+                    <div class="counter-container2">
+                      <div class="counter" id="counterMenu2">0</div>
+                      <button class="btn-increment2" onclick="incrementCounter('counterMenu2')">+</button>
+                      <button class="btn-decrement2" onclick="decrementCounter('counterMenu2')">-</button>
+                    </div>
+                  </div>
+
+                  
+                  <!-- Seu script JavaScript -->
+                  <script>
+
+                    function incrementCounter(counterId) {
+                      // Incrementa todos os contadores, exceto counterMenu2
+                      if (counters[counterId] < 999 && counterId !== 'counterMenu2') {
+                        counters[counterId]++;
+                      } else if (counterId === 'counterMenu2' && counters[counterId] < 1) {
+                        counters[counterId] = 1;
+                      }
+                  
+                      document.getElementById(counterId).textContent = counters[counterId];
+                    }
+                  
+                    function decrementCounter(counterId) {
+                      // Decrementa todos os contadores, exceto counterMenu2
+                      if (counters[counterId] > 0 && counterId !== 'counterMenu2') {
+                        counters[counterId]--;
+                      } else if (counterId === 'counterMenu2' && counters[counterId] > 0) {
+                        counters[counterId] = 0;
+                      }
+                  
+                      document.getElementById(counterId).textContent = counters[counterId];
+                    }
+
+                  </script>
+
+
+               </div>
+
+                
+
+                
+        
+                <div style="background: rgb(234, 226, 226); margin-bottom: 25px;">
+                    <p> <b>Escolha Duas Opções de Topping:</b></p>
+                    <p> <b>Escolha 2 opções:</b></p>
+                </div>
+
+
+                    <form id="check_modal1" action="#">
+                        <label>
+                            <input type="checkbox" name="topping" value="abacaxi" onclick="limitToppings()"> Abacaxi    
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="amendoim" onclick="limitToppings()"> Amendoim
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="banana" onclick="limitToppings()"> Banana
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-lactea" onclick="limitToppings()"> Farinha Láctea
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="farinha-tapioca" onclick="limitToppings()"> Farinha de Tapioca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-condensado" onclick="limitToppings()"> Leite Condensado
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="mel" onclick="limitToppings()"> Mel
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="pacoca" onclick="limitToppings()"> Paçoca
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="uva" onclick="limitToppings()"> Uva
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="granola" onclick="limitToppings()"> Granola
+                        </label><br>
+                    
+                        <label>
+                            <input type="checkbox" name="topping" value="leite-em-po" onclick="limitToppings()"> Leite em Pó
+                        </label><br>
+                    
+                    </form>
+
+
+
+                    <div id="contadores">
+
+
+                        <div class="contador_container2">
+                            <p>Salada  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu2A1">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu2A1', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu2A1', -1)">-</button>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="contador_container2">
+                            <p>Leite em Pó  <span style="color: rgb(231, 86, 86);display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu2A2">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu2A2', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu2A2', -1)">-</button>
+                            </div>
+                        </div>
+
+                        <div class="contador_container2">
+                            <p>Mel  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu2A3">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu2A3', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu2A3', -1)">-</button>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="contador_container2">
+                            <p>Granola  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu2A4">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu2A4', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu2A4', -1)">-</button>
+                            </div>
+                        </div>
+
+                        <div class="contador_container2">
+                            <p>Chocolate  <span style="color: rgb(231, 86, 86); display: flex; justify-content: start;">+ R$ 1,00</span></p>
+                            <div class="counter-container">
+                                <div class="counter" id="counterMenu2A5">0</div>
+                                <button style="color: rgb(1, 255, 1);" class="btn-increment" onclick="incrementCounter('counterMenu2A5', 1)">+</button>
+                                <button class="btn-decrement" onclick="decrementCounter('counterMenu2A5', -1)">-</button>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+
+
+                     <form id="form" onsubmit="return confirmPurchase('myModall2');">
+                        <h2>Seu Endereço</h2>
+                        <label for="">Bairro</label> <br>
+                        <input id="bairro" type="text" placeholder="Seu bairro..." required><br>
+
+                        <label for="">Rua</label> <br>
+                        <input id="rua" type="text" placeholder="Sua rua..." required><br>
+
+                        <label for="">Número da casa</label> <br>
+                        <input id="numeroCasa" type="number" placeholder="Número da sua casa..." required>
+
+                        <br><br>
+                         <input  id="enviarPedido" class="btn1" type="submit" value="Enviar"> 
+                    </form>
+                    <br><br> 
+                  
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="card3"> 
+            <img onclick="openModal('myModall3')" src="images/acai_3.jpg" alt="Sanduba de Frango">
+            <h2  onclick="openModal('myModall3')">Açaí Artesanal</h2>
+            <p>Banana, granola, leite em pó, farinha de amendoim, leite Condensado, sucrilho.</p>
+            <p class="p_preco_card2">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('myModall3')">+</a>
+            <div class="descricao-produto"></div>
+        </div>
+
+
+
+
+        <div class="card4">
+            <img onclick="openModal('myModal1')" src="images/acai_4.jpg" alt="Sanduba de Frango">
+            <h2 onclick="openModal('myModal1')">Açaí Artesanal</h2>
+            <p>Banana, granola, leite em pó, farinha de amendoim, leite Condensado, sucrilho.</p>
+            <p class="p_preco_card2">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('')">+</a>
+            <div class="descricao-produto"></div>
+        </div>
+
+
+
+
+        <div  class="card5">
+            <img onclick="openModal('myModal1')" src="images/acai_6.jpg" alt="Sanduba de Frango">
+            <h2 onclick="openModal('myModal1')">Açaí Artesanal</h2>
+            <p>Banana, granola, leite em pó, farinha de amendoim, leite Condensado, sucrilho.</p>
+            <p class="p_preco_card2">R$ 24,00</p>
+            <a class="comprar-button1" onclick="openModal('')">+</a>
+            <div class="descricao-produto"></div>
+        </div>
+
+
+
+    </section>
+
+
+
+</body>
+</html>
