@@ -14,14 +14,36 @@
    <!-- custom js file link  -->
    <script src="JS/produtos.js" defer></script>
 
+   <script src="JS/index.js" type="module"></script>
+
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
+
 </head>
 <body>
+
+
+   <header class="header">
+      <!-- <img class="logo" src="images/logo1.jpg" alt="" height="45px" width="70px">  -->
+       <a href="index.html" class="logo">Logo.</a> 
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <nav class="navbar">
+          <a href="/index.html#home" class="active">HOME</a>
+          <a href="/index.html#about">SOBRE NÓS</a>
+          <a href="/index.html#cardapio">CARDÁPIO</a>
+          <a href="#pedido">PEDIDOS</a>
+          <span class="active-nav"></span>
+
+
+      </nav>
+  </header>   
    
 <div class="container">
 
    <h3 class="title"> Faça seus Pedidos </h3>
 
-   <div class="products-container">
+   <div id="pedido" class="products-container">
 
       <div class="product" data-name="p-1">
          <img src="images/acai.png" alt="">
