@@ -20,3 +20,14 @@ previewBox.forEach(close =>{
     preveiwContainer.style.display = 'none';
   };
 });
+
+
+$(document).ready(function(){
+  $('.products-container').slick({
+     slidesToShow: 2, // Número de produtos a serem exibidos ao mesmo tempo
+     slidesToScroll: 1, // Número de produtos a serem percorridos ao avançar ou retroceder
+     dots: true, // Adiciona navegação por pontos (indicadores)
+     prevArrow: '<button type="button" class="slick-prev">Previous</button>', // Botão de navegação anterior
+     nextArrow: '<button type="button" class="slick-next">Next</button>' // Botão de navegação seguinte
+  });
+});

@@ -18,6 +18,14 @@
 
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
 
+
+   
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 <body>
 
@@ -30,9 +38,10 @@
 
       <nav class="navbar">
           <a href="/index.html#home" class="active">HOME</a>
-          <a href="/index.html#about">SOBRE NÓS</a>
-          <a href="/index.html#cardapio">CARDÁPIO</a>
-          <a href="#pedido">PEDIDOS</a>
+          <a href="#pedido">AÇAÍ</a>
+          <a href="#">OUTRO PRODUTO</a>
+          <a href="#">OUTRO PRODUTO</a>
+          <a href="#">OUTRO PRODUTO</a>        
           <span class="active-nav"></span>
 
 
@@ -41,9 +50,10 @@
    
 <div class="container">
 
-   <h3 class="title"> Faça seus Pedidos </h3>
+   <h3 id="pedido" class="title"> Faça seus Pedidos </h3>
+   <h3  class="titleAcai"> Compre o seu Açaí </h3>
 
-   <div id="pedido" class="products-container">
+   <div  class="products-container">
 
       <div class="product" data-name="p-1">
          <img src="images/acai.png" alt="">
@@ -210,5 +220,10 @@
 
 </div>
 
+
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

@@ -98,6 +98,15 @@ body{
    text-align: center;
 }
 
+.container .titleAcai{
+   font-size: 3.5rem;
+   color:#ff0000;
+   margin-bottom: 3rem;
+   margin-top: 50px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
 .container .products-container{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -120,7 +129,8 @@ body{
 }
 
 .container .products-container .product img{
-   height: 25rem;
+   height: 15rem;
+   margin-left: 20px;
 }
 
 .container .products-container .product:hover img{
@@ -243,9 +253,6 @@ body{
    background: #444;
    color:#fff;
 }
-
-
-
 
 
 
