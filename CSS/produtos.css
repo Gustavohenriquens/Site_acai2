@@ -83,37 +83,31 @@ body{
 
 /* Corpo da Page */
 
-.container{
+.container,
+.container2{
    max-width: 1200px;
    margin:0 auto;
-   padding:3rem 2rem;
+   padding:3rem 2rem; 
 }
 
-.container .title{
+.container .title,
+.container2 .title{
    font-size: 3.5rem;
    color:#444;
    margin-bottom: 3rem;
-   margin-top: 8rem;
    text-transform: uppercase;
    text-align: center;
 }
 
-.container .titleAcai{
-   font-size: 3.5rem;
-   color:#ff0000;
-   margin-bottom: 3rem;
-   margin-top: 50px;
-   text-transform: uppercase;
-   text-align: center;
-}
-
-.container .products-container{
+.container .products-container,
+.container2 .products-container2{
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap:2rem;
 }
 
-.container .products-container .product{
+.container .products-container .product,
+.container2 .products-container2 .product2{
    text-align: center;
    padding:3rem 2rem;
    background: #fff;
@@ -121,38 +115,49 @@ body{
    outline: .1rem solid #ccc;
    outline-offset: -1.5rem;
    cursor: pointer;
+   /*position: relative; */
 }
 
-.container .products-container .product:hover{
+.container .products-container .product:hover,
+.container2 .products-container2 .product2:hover{
    outline: .2rem solid #222;
    outline-offset: 0;
 }
 
-.container .products-container .product img{
+.container .products-container .product img,
+.container2 .products-container2 .product2 img{
    height: 15rem;
    margin-left: 20px;
 }
 
-.container .products-container .product:hover img{
+.container .products-container .product:hover img,
+.container2 .products-containe2 .product2:hover img{
    transform: scale(.9);
 }
 
-.container .products-container .product h3{
+.container .products-container .product h3,
+.container2 .products-container2 .product2 h3{
    padding:.5rem 0;
    font-size: 2rem;
    color:#444;
 }
 
-.container .products-container .product:hover h3{
+.container .products-container .product:hover h3,
+.container2 .products-container2 .product2:hover h3{
    color:#27ae60;
 }
 
-.container .products-container .product .price{
+.container .products-container .product .price,
+.container2 .products-container2 .product2 .price{
    font-size: 2rem;
    color:#444;
-}
+} 
 
-.products-preview{
+
+
+
+
+/* .products-preview{
    position: fixed;
    top:0; left:0;
    min-height: 100vh;
@@ -160,10 +165,26 @@ body{
    background: rgba(0,0,0,.8);
    display: none;
    align-items: center;
+   justify-content: center;   
+} */
+
+
+.products-preview,
+.products-preview2 {
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.8);
+   display: none;
+   align-items: center;
    justify-content: center;
+   z-index: 1000; /* Ajuste o valor conforme necessário */
 }
 
-.products-preview .preview{
+.products-preview .preview,
+.products-preview2 .preview2{
    display: none;
    padding:2rem;
    text-align: center;
@@ -173,15 +194,18 @@ body{
    width: 40rem;
 }
 
-.products-preview .preview.active{
+.products-preview .preview.active,
+.products-preview2 .preview2.active{
    display: inline-block;
 }
 
-.products-preview .preview img{
+.products-preview .preview img,
+.products-preview2 .preview2 img{
    height: 30rem;
 }
 
-.products-preview .preview .fa-times{
+.products-preview .preview .fa-times,
+.products-preview2 .preview2 .fa-times{
    position: absolute;
    top:1rem; right:1.5rem;
    cursor: pointer;
@@ -189,50 +213,59 @@ body{
    font-size: 4rem;
 }
 
-.products-preview .preview .fa-times:hover{
+.products-preview .preview .fa-times:hover,
+.products-preview2 .preview2 .fa-times:hover{
    transform: rotate(90deg);
 }
 
-.products-preview .preview h3{
+.products-preview .preview h3,
+.products-preview2 .preview2 h3{
    color:#444;
    padding:.5rem 0;
    font-size: 2.5rem;
 }
 
-.products-preview .preview .stars{
+.products-preview .preview .stars,
+.products-preview2 .preview2 .stars{
    padding:1rem 0;
    font-size: 1.7rem;
 }
 
-.products-preview .preview .stars i{
+.products-preview .preview .stars i,
+.products-preview2 .preview2 .stars i{
    color:#27ae60;
 }
 
-.products-preview .preview .stars span{
+.products-preview .preview .stars span,
+.products-preview2 .preview2 .stars span{
    color:#999;
 }
 
-.products-preview .preview p{
+.products-preview .preview p,
+.products-preview2 .preview2 p{
    line-height: 1.5;
    padding:1rem 0;
    font-size: 1.6rem;
    color:#777;
 }
 
-.products-preview .preview .price{
+.products-preview .preview .price,
+.products-preview2 .preview2 .price{
    padding:1rem 0;
    font-size: 2.5rem;
    color:#27ae60;
 }
 
-.products-preview .preview .buttons{
+.products-preview .preview .buttons,
+.products-preview2 .preview2 .buttons{
    display: flex;
    gap:1.5rem;
    flex-wrap: wrap;
    margin-top: 1rem;
 }
 
-.products-preview .preview .buttons a{
+.products-preview .preview .buttons a,
+.products-preview2 .preview2 .buttons a{
    flex:1 1 16rem;
    padding:1rem;
    font-size: 1.8rem;
@@ -240,16 +273,19 @@ body{
    border:.1rem solid #444;
 }
 
-.products-preview .preview .buttons a.cart{
+.products-preview .preview .buttons a.cart,
+.products-preview2 .preview2 .buttons a.cart{
    background: #444;
    color:#fff;
 }
 
-.products-preview .preview .buttons a.cart:hover{
+.products-preview .preview .buttons a.cart:hover,
+.products-preview2 .preview2 .buttons a.cart:hover{
    background: #111;
 }
 
-.products-preview .preview .buttons a.buy:hover{
+.products-preview .preview .buttons a.buy:hover,
+.products-preview2 .preview2 .buttons a.buy:hover{
    background: #444;
    color:#fff;
 }
@@ -290,6 +326,10 @@ body{
    }
 
    .products-preview .preview img{
+      height: 25rem;
+   }
+
+   .products-preview2 .preview2 img{
       height: 25rem;
    }
 
@@ -387,6 +427,10 @@ body{
    .products-container {
        grid-template-columns: 1fr;
    }
+
+   .products-container2{
+      grid-template-columns: 1fr;
+  }
 }
 
 
@@ -449,4 +493,16 @@ body{
        flex-direction: column;
        text-align: center;
    }
+}
+
+@media (max-width:350px){
+
+   .products-preview .preview img{
+      height: 25rem;
+   }
+
+   .products-preview2 .preview2 img{
+      height: 25rem;
+   }
+
 }
