@@ -36,4 +36,23 @@ $(document).ready(function(){
 
 
 
+function limitToppings() {
+  var checkboxes = document.querySelectorAll('input[name="topping"]');
+  var checkedCount = 0;
+
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      checkedCount++;
+    }
+  });
+
+  checkboxes.forEach(function (checkbox) {
+    checkbox.disabled = checkedCount === 2 && !checkbox.checked;
+  });
+}
+
+
+
+
+
 

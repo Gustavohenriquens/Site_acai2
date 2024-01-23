@@ -1,29 +1,29 @@
-let preveiwContainer = document.querySelector('.products-preview');
-let previewBox = preveiwContainer.querySelectorAll('.preview');
+let preveiwContainer3 = document.querySelector('.products-preview3');
+let previewBox3 = preveiwContainer3.querySelectorAll('.preview3');
 
-document.querySelectorAll('.products-container .product').forEach(product =>{
-  product.onclick = () =>{
-    preveiwContainer.style.display = 'flex';
-    let name = product.getAttribute('data-name');
-    previewBox.forEach(preview =>{
-      let target = preview.getAttribute('data-target');
+document.querySelectorAll('.products-container3 .product3').forEach(product3 =>{
+  product3.onclick = () =>{
+    preveiwContainer3.style.display = 'flex';
+    let name = product3.getAttribute('data-name');
+    previewBox3.forEach(preview3 =>{
+      let target = preview3.getAttribute('data-target');
       if(name == target){
-        preview.classList.add('active');
+        preview3.classList.add('active');
       }
     });
   };
 });
 
-previewBox.forEach(close =>{
+previewBox3.forEach(close =>{
   close.querySelector('.fa-times').onclick = () =>{
     close.classList.remove('active');
-    preveiwContainer.style.display = 'none';
+    preveiwContainer3.style.display = 'none';
   };
 });
 
 
 $(document).ready(function(){
-  $('.products-container').slick({
+  $('.products-container3').slick({
      slidesToShow: 2, // Número de produtos a serem exibidos ao mesmo tempo
      slidesToScroll: 1, // Número de produtos a serem percorridos ao avançar ou retroceder
      dots: true, // Adiciona navegação por pontos (indicadores)
@@ -31,6 +31,7 @@ $(document).ready(function(){
      nextArrow: '<button type="button" class="slick-next">Next</button>' // Botão de navegação seguinte
   });
 });
+
 
 
 
@@ -49,3 +50,9 @@ function limitToppings() {
     checkbox.disabled = checkedCount === 2 && !checkbox.checked;
   });
 }
+
+
+
+
+
+
