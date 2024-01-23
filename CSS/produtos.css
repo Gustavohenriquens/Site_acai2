@@ -451,6 +451,10 @@ margin-bottom: 15px;
       height: 25rem;
    }
 
+   .products-preview3 .preview3 img{
+      height: 25rem;
+   }
+
    #menu-icon {
        display: block;
    }
@@ -549,6 +553,10 @@ margin-bottom: 15px;
    .products-container2{
       grid-template-columns: 1fr;
   }
+
+  .products-container3{
+   grid-template-columns: 1fr;
+}
 }
 
 
@@ -620,6 +628,9 @@ margin-bottom: 15px;
    }
 
    .products-preview2 .preview2 img{
+      height: 25rem;
+   }
+   .products-preview3 .preview3 img{
       height: 25rem;
    }
 
