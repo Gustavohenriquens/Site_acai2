@@ -72,6 +72,7 @@ function confirmPurchase(modalId) {
 
   // Obtenha informações dos contadores
   var salada = document.getElementById('counter1').textContent;
+  var leiteEmPo1 = document.getElementById('counter2').textContent;
   var leiteEmPo1 = document.getElementById('counter3').textContent;
   var mel = document.getElementById('counter4').textContent;
   var granola = document.getElementById('counter5').textContent;
